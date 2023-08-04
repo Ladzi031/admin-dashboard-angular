@@ -1,1 +1,3 @@
 # admin-dashboard-angular
+
+a basic administrator dashboard, to view users that are "logged in" a system...
