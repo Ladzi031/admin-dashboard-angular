@@ -1,15 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
-
-
-
-type user = {
-  id: number,
-  first_name: string,
-  last_name: string,
-  status: "online" | "offline",
-
-}
+import { users } from 'src/app/interfaces/users'
 
 
 @Component({
@@ -18,11 +9,11 @@ type user = {
   styleUrls: ['./overview.component.css']
 })
 export class OverviewComponent implements OnInit {
-
-  public users !: user[]; 
+  public users !: users[];
 
   constructor(private userService: UsersService){}
-ngOnInit(): void {
+  
+  ngOnInit(): void {
   this.users = this.userService.getUser();
 }
 }
