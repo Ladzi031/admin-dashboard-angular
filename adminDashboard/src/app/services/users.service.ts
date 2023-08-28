@@ -13,7 +13,14 @@ type users = {
 })
 export class UsersService {
  
-public members : users[] =[ 
+
+
+  constructor() { }
+
+  getUser(): users[] {
+    return this.members;
+  }
+  public members : users[] =[ 
   {
   id: 1,
   first_name: "james",
@@ -38,10 +45,4 @@ public members : users[] =[
   last_name: "gosling",
   status: "online"
 }];
-
-  constructor() { }
-
-  getUser(): users[] {
-    return this.members;
-  }
 }

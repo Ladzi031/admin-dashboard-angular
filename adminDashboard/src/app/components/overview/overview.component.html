@@ -1,4 +1,3 @@
-<p>overview works!</p>
 <div class="table-responsive small">
   <table class="table table-striped table-sm">
     <thead>
@@ -15,6 +14,33 @@
         <td>{{ user.first_name | titlecase }}</td>
         <td>{{ user.last_name | titlecase }}</td>
         <td>{{ user.status }}</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              manage
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button">set offline</button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  view activity since online
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button">
+                  restrict access to some resources
+                </button>
+              </li>
+            </ul>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
