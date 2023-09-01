@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { catchError, throwError} from 'rxjs';
 
 type users = {
   id: number,
@@ -13,14 +15,24 @@ type users = {
 })
 export class UsersService {
  
-//TODO: move fake data to an expressJs server... but for now...
+//TODO: implement a filtering option... filter by offline users or online users..
 
-  constructor() { }
 
-  getUser(): users[] {
-    return this.members;
+public fakeDataUrl : string =  '/assets/FakeData.json';
+
+  constructor( private _http: HttpClient) { }
+
+  getUsers() {
+   return this._http.get(this.fakeDataUrl).pipe(catchError(this.errorHandler));
   }
-  public members : users[] =[ 
+ errorHandler(error : HttpErrorResponse){
+   console.log("something went wrong!");
+  return throwError( () => new Error(error.message));
+ }
+}
+
+/*
+ public members : users[] =[ 
   {
   id: 1,
   first_name: "james",
@@ -44,5 +56,4 @@ export class UsersService {
   first_name: "mosh",
   last_name: "gosling",
   status: "online"
-}];
-}
+}]; */
