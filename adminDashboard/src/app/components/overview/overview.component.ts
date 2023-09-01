@@ -11,12 +11,16 @@ import { Subscription } from 'rxjs';
 })
 export class OverviewComponent implements OnInit{
   public users !: users[];
-
+  public totalNumUsers = 0;
   constructor(private userService: UsersService){}
   
   ngOnInit(): void {
-     this.userService.getUsers().subscribe((data) => this.users = data as users[] );
-}
-
+     this.userService.getUsers().subscribe((data) => { 
+      this.users = data as users[];
+      this.totalNumUsers = this.users.length;
+      });
+     
+    }
+   
 
 }
