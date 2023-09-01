@@ -43,7 +43,12 @@
         >
           username is required
         </small>
-        <small class="text-danger" *ngIf="getUserNameControlForm().errors?.['minlength']"  > username should be at least 3 characters long</small>
+        <small
+          class="text-danger"
+          *ngIf="getUserNameControlForm().errors?.['minlength']"
+        >
+          username should be at least 3 characters long</small
+        >
       </div>
       <label for="userName">Username</label>
     </div>
@@ -56,6 +61,24 @@
         placeholder="Password"
         minlength="3"
       />
+      <div
+        *ngIf="
+          getPasswordControlForm().invalid && getPasswordControlForm().touched
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="getPasswordControlForm()?.errors?.['required']"
+        >
+          password is required
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="getPasswordControlForm().errors?.['minlength']"
+        >
+          password should be at least 3 characters long</small
+        >
+      </div>
       <label for="Password">Password</label>
     </div>
 
