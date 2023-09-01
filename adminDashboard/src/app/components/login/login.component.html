@@ -83,7 +83,12 @@
     </div>
 
     <div class="text-center m-4">
-      <button class="btn btn-primary w-50 py-2" type="submit" (click)="test()">
+      <button
+        [disabled]="loginForm.invalid"
+        class="btn btn-primary w-50 py-2"
+        type="submit"
+        (click)="test()"
+      >
         login in
       </button>
     </div>
