@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
-import { users } from 'src/app/interfaces/users'
-import { Subscription } from 'rxjs';
+import { users } from 'src/app/model/users'
+
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.css']
 })
-export class OverviewComponent implements OnInit{
+export class OverviewComponent implements OnInit{ 
   public users !: users[];
   public totalNumUsers = 0;
   constructor(private userService: UsersService){}
@@ -19,8 +19,6 @@ export class OverviewComponent implements OnInit{
       this.users = data as users[];
       this.totalNumUsers = this.users.length;
       });
-     
     }
-   
-
+    
 }
