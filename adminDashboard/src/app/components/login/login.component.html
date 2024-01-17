@@ -16,9 +16,100 @@
       />
     </svg>
   </div>
-  <p class="h3 py-2">Admin_Dash</p>
+  <p class="h3 py-2">
+    <span class="custom-title">PraK</span
+    ><span class="some-border">Tise<span id="u-score">_</span></span>
+  </p>
 </header>
+
 <main class="m-auto">
+  <mat-card class="full-width">
+    <mat-card-header class="m-auto">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="form-width">
+        <mat-form-field class="full-width">
+          <mat-label>Username</mat-label>
+          <input type="text" matInput placeholder="admin" />
+          <!--@if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+          }
+          @if (emailFormControl.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+          }-->
+        </mat-form-field>
+
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Test@1234" />
+          <!--@if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+            <mat-error>Please enter a valid email address</mat-error>
+          }
+          @if (emailFormControl.hasError('required')) {
+            <mat-error>Email is <strong>required</strong></mat-error>
+          }-->
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions class="d-flex justify-content-around align-items-center">
+      <button mat-button class="some-border">Login</button>
+      <button mat-button class="some-border">New User?</button>
+    </mat-card-actions>
+  </mat-card>
+</main>
+<footer>
+  <!--Waves Container-->
+  <div class="header">
+    <div>
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+        shape-rendering="auto"
+      >
+        <defs>
+          <path
+            id="gentle-wave"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          />
+        </defs>
+        <g class="parallax">
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="0"
+            fill="rgba(255,255,255,0.7)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="3"
+            fill="rgba(255,255,255,0.5)"
+          />
+          <use
+            xlink:href="#gentle-wave"
+            x="48"
+            y="5"
+            fill="rgba(255,255,255,0.3)"
+          />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+      </svg>
+    </div>
+    <!--Waves end-->
+  </div>
+  <div class="footer-title">
+    <p class="h4">
+      <span class="custom-title">PraK</span
+      ><span class="some-border">Tise<span id="u-score">_</span></span>
+    </p>
+  </div>
+</footer>
+
+<!--
   <form [formGroup]="loginForm" >
     <div class="form-floating py-2 mb-2">
       <input
@@ -93,4 +184,4 @@
       </button>
     </div>
   </form>
-</main>
+-->
