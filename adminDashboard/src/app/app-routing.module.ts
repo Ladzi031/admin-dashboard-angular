@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { OverviewComponent } from './components/panel/overview.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+  {
+    path: 'register',
+    component: RegisterComponent
+  }
   {
     path: 'overview',
     component: OverviewComponent
@@ -32,6 +37,7 @@ export class AppRoutingModule {}
 
 export const routingComponents = [
   LoginComponent,
+  RegisterComponent,
   OverviewComponent,
-  PageNotFoundComponent,
+  PageNotFoundComponent
 ];
