@@ -21,17 +21,23 @@
     ><span class="some-border">Tise<span id="u-score">_</span></span>
   </p>
 </header>
-
+{{ this.loginForm.value | json }}
 <main class="m-auto">
   <mat-card class="full-width">
     <mat-card-header class="m-auto">
       <mat-card-title>Login</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="form-width">
+      <form [formGroup]="loginForm" class="form-width">
         <mat-form-field class="full-width">
           <mat-label>Username</mat-label>
-          <input type="text" matInput placeholder="admin" />
+          <input
+            type="text"
+            matInput
+            placeholder="admin"
+            id="userName"
+            formControlName="userName"
+          />
           <!--@if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
             <mat-error>Please enter a valid email address</mat-error>
           }
@@ -42,7 +48,13 @@
 
         <mat-form-field class="full-width">
           <mat-label>Password</mat-label>
-          <input type="password" matInput placeholder="Test@1234" />
+          <input
+            type="password"
+            matInput
+            placeholder="Test@1234"
+            id="password"
+            formControlName="password"
+          />
           <!--@if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
             <mat-error>Please enter a valid email address</mat-error>
           }

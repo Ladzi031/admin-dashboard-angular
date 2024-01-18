@@ -21,18 +21,15 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(3)]]
     });
   }
-
   
-  getUserNameControlForm() : AbstractControl {
+   
+}
+ /*
+   getUserNameControlForm() : AbstractControl {
     return this.loginForm.get('userName')!;
   }
   
   getPasswordControlForm() : AbstractControl {
     return this.loginForm.get('password')!;
   }
-  
-  
-  test() {
-    this.router.navigate(['/overview']);
-  }
-}
+   */
